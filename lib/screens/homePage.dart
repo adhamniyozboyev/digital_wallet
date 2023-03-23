@@ -13,34 +13,105 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text('Your balance'),
-          Text(
-            'Rp 8.250.000',
-            style: TextStyle(
-                fontSize: 34, color: Color.fromARGB(255, 12, 64, 108)),
+          Column(
+            children: [
+              Text('Your balance'),
+              Text(
+                'Rp 8.250.000',
+                style: TextStyle(
+                    fontSize: 34, color: Color.fromARGB(255, 12, 64, 108)),
+              ),
+            ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CircleAvatar(child: Icon(Icons.arrow_forward)),
-              CircleAvatar(
-                child: Icon(Icons.arrow_downward),
+              Column(
+                children: [
+                  CircleAvatar(child: Icon(Icons.arrow_forward)),
+                  Text('Transfer')
+                ],
               ),
-              CircleAvatar(child: Icon(Icons.payment)),
-              CircleAvatar(
-                child: Icon(Icons.menu),
+              Column(
+                children: [
+                  CircleAvatar(
+                    child: Icon(Icons.arrow_downward),
+                  ),
+                  Text('Top-up')
+                ],
+              ),
+              Column(
+                children: [
+                  CircleAvatar(child: Icon(Icons.payment)),
+                  Text('Bill')
+                ],
+              ),
+              Column(
+                children: [
+                  CircleAvatar(
+                    child: Icon(Icons.menu),
+                  ),
+                  Text('More')
+                ],
               )
             ],
           ),
           Card(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ListTile(
-                  leading: Icon(Icons.shopping_bag),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text('             326.800'),
+                      Text('Minimarket Anugrah')
+                    ],
+                  ),
+                  leading: Icon(
+                    Icons.shopping_bag,
+                    color: Colors.blue,
+                  ),
                   title: Text('Grocery'),
-                  subtitle: Text('Nov 17                                  '),
+                  subtitle: Text('Nov 17'),
+                ),
+                ListTile(
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [Text('   326.800'), Text('Football game')],
+                  ),
+                  leading: Icon(
+                    Icons.tv,
+                    color: Colors.pink,
+                  ),
+                  title: Text('Entertainment'),
+                  subtitle: Text('Nov 12'),
+                ),
+                ListTile(
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [Text('   326.800'), Text('DSLr Camera')],
+                  ),
+                  leading: Icon(
+                    Icons.camera_alt,
+                    color: Colors.orange,
+                  ),
+                  title: Text('Equipments'),
+                  subtitle: Text('Nov 17'),
+                ),
+                ListTile(
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [Text('326.800'), Text('Stationary')],
+                  ),
+                  leading: Icon(
+                    Icons.badge,
+                    color: Colors.green,
+                  ),
+                  title: Text('Office Items'),
+                  subtitle: Text('Nov 17'),
                 ),
               ],
             ),

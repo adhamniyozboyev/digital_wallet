@@ -1,3 +1,4 @@
+import 'package:digital_wallet/nextpages/withdraw.dart';
 import 'package:flutter/material.dart';
 import 'package:digital_wallet/screens/catagoryPage.dart';
 import 'package:digital_wallet/screens/homePage.dart';
@@ -26,6 +27,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        'withdraw':(context) => WithDraw()
+      },
       home: Scaffold(
           body: screens[_index],
           bottomNavigationBar: BottomNavigationBar(
@@ -42,9 +46,9 @@ class _MyAppState extends State<MyApp> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.home_rounded), label: 'Home'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.view_agenda), label: 'Category'),
+                  icon: Icon(Icons.person_2), label: 'Contacts'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.read_more), label: 'Menu'),
+                  icon: Icon(Icons.menu), label: 'Menu'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.settings), label: 'Settings')
             ],
