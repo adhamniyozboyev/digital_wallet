@@ -63,6 +63,9 @@ class _MenuPageState extends State<MenuPage> {
         ),
         Card(
           child: ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, 'payment');
+            },
             subtitle: Text(''),
             leading: Icon(
               Icons.blinds_closed,
