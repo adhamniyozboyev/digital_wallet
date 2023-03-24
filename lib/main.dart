@@ -1,3 +1,4 @@
+import 'package:digital_wallet/nextpages/billPayment.dart';
 import 'package:digital_wallet/nextpages/withdraw.dart';
 import 'package:flutter/material.dart';
 import 'package:digital_wallet/screens/catagoryPage.dart';
@@ -28,7 +29,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        'withdraw':(context) => WithDraw()
+        'withdraw': (context) => WithDraw(),
+        'payment': (context) => Payment()
       },
       home: Scaffold(
           body: screens[_index],
@@ -47,8 +49,7 @@ class _MyAppState extends State<MyApp> {
                   icon: Icon(Icons.home_rounded), label: 'Home'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person_2), label: 'Contacts'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.menu), label: 'Menu'),
+              BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.settings), label: 'Settings')
             ],
